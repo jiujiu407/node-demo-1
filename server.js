@@ -25,12 +25,24 @@ var server = http.createServer(function(request, response){
     response.statusCode = 200
     // Content-Type表示内容的[类型/语法]
     response.setHeader('Content-Type', 'text/html;charset=utf-8')
-    response.write(`二哈`)
+    response.write(`<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="c">
+    </head>
+    <body>
+        <h1>这是一个船新版本</h1>
+    </body>
+    </html>`)
     response.end()
   } else if(path === '/c'){
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/css;charset=utf-8')
-    response.write(`body{color: red;}`)
+    response.write(`h1{color: red;}`)
     response.end()
   } else if(path === '/y'){
     response.statusCode = 200
